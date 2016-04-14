@@ -45,7 +45,6 @@ Server.register(
     argv: Argv,
     config: {
       http_server: {
-        host: 'localhost',
         port: 8000,
       },
       api_path: '',
