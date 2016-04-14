@@ -1,11 +1,16 @@
 'use strict';
 
+const os=require('os')
+
 const index = {
   config: {
     //
   },
   handler: function(req, res){
-    return res('hello world')
+
+    let netInfo = os.networkInterfaces();
+
+    return res(netInfo)
   }
 }
 
