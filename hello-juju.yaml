@@ -1,2 +1,3 @@
-node-app:
-  app_url: htpps://github.com/sevenbitbyte/hello-juju
+hello-juju:
+  app_name: hello-juju
+  app_url: http://github.com/sevenbitbyte/hello-juju.git

@@ -3,7 +3,6 @@
 const Joi = require('joi')
 const Hapi = require('hapi')
 const Hoek = require('hoek')
-const HapiMongooseDbConnector = require('hapi-mongoose-db-connector')
 
 
 exports.register = function(options, cb){
@@ -18,7 +17,6 @@ exports.register = function(options, cb){
   var appConfig = server.settings.app.config
 
   var hapiPlugins = Hoek.clone(options.plugins)
-  hapiPlugins.push({ register: HapiMongooseDbConnector, options: {mongodbUrl: appConfig.mongodb_uri}})
 
   server.connection({
       host: appConfig.http_server.host,
